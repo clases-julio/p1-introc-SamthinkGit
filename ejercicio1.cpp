@@ -7,12 +7,9 @@ using namespace std;
   Date: 28/09/2022
   Grade: Software Robotics (Software Design)
 º
-  Behaviour: Prompts 2 diferent numbers. Then their sum, product, difference and quotient
+  Behaviour: Prompts 2 different numbers. Then their sum, product, difference and quotient
   are printed
 
-  Notes:
-  - This is the Note A
-  - This is the Note B
  --------------------------------------------------------------------------------------
 */
 
