@@ -1,9 +1,9 @@
 # include <iostream>
 using namespace std;
 
-/* ---------------------------- Exercise 2a - Practice 1 --------------------------------
+/* ---------------------------- Exercise 2b - Practice 1 --------------------------------
   Author: Sebastian Mayorquin
-  File: ejercicio2.cpp
+  File: ejercicio2b.cpp
   Date: 28/09/2022
   Grade: Software Robotics (Software Design)
 
@@ -14,7 +14,7 @@ using namespace std;
 int main(){
 
     // ----- Printing ------
-    cout << "1 2 3 4";
+    cout << "1 " << "2 " << "3 " << '4';
 
     return 0;
 }
