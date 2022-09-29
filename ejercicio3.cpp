@@ -20,7 +20,7 @@ int main(){
 
     // ----- Declarations ------
 
-    float first_number, second_number;
+    int first_number, second_number;
 
     // ----- Taking Numbers ------
 
