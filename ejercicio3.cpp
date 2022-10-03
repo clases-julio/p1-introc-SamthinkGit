@@ -7,7 +7,7 @@ using namespace std;
   Date: 28/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour: Prompts 2 different numbers. They will be compared and the biggest one
+  Behaviour: Requests 2 different numbers. They will be compared and the biggest one
   will be printed
 
   Notes:
@@ -23,7 +23,6 @@ int main(){
     int first_number, second_number;
 
     // ----- Taking Numbers ------
-
     cout << "---------- Exercise 3 - Practice 1 ----------\n";
     cout << " Number 1: "   ;
     cin >> first_number;
@@ -31,7 +30,6 @@ int main(){
     cin >> second_number;
 
     // ----- Comparing ------
-
     cout << "---- Solution ------\n";
 
     if(first_number > second_number)

@@ -6,7 +6,7 @@ using namespace std;
   Date: 29/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour: Prompts N numbers, then it prints them back separated by spaces
+  Behaviour: Requests N numbers, then prints them back separated by spaces
  --------------------------------------------------------------------------------------
 */
 
@@ -25,7 +25,7 @@ int main(){
 
     // ----- Verifying ------
 
-    if (number.length() != 5)
+    if (number.length() != AMOUNT)
         cout << "[WARNING] " << AMOUNT << "-digit number was expected\n";
 
     // ----- Printing Result ------

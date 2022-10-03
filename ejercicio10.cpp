@@ -33,9 +33,9 @@ void rhombus_line(int amount, int SIZE){
 
     int spaces = (SIZE - amount)/2;
 
-    for (int i = 0; i < spaces; i++) cout << " ";
-    for (int i = 0; i < amount; i++) cout << "*";
-    for (int i = 0; i < spaces; i++) cout << " ";
+    for (int i = 0; i < spaces; i++) cout << ' ';
+    for (int i = 0; i < amount; i++) cout << '*';
+    for (int i = 0; i < spaces; i++) cout << ' ';
 
     cout << endl;
 
@@ -50,16 +50,15 @@ int main(){
     // ----- Initializing ------
     cout << "---------- Exercise 10 - Practice 1 ----------" << endl;
 
-    // ----- Verifying ------
+    // ----- Verifying ------ (Uncomment if modify SIZE constant)
+    // if (SIZE % 2 == 0) cout << " [WARNING] Even sizes could end in corrupted shapes" << endl;
 
-    if (SIZE % 2 == 0) cout << "[WARNING] Even sizes could end in corrupted shapes" << endl;
-
-    // ----- Drawing First half------
+    // ----- Drawing First half ------
     for (int stars = 1; stars <= SIZE; stars += 2){
         rhombus_line(stars,SIZE);
     }
 
-    // ----- Drawing Second Half ------
+    // ----- Drawing Second half ------
     for (int stars = SIZE-2; stars >= 1; stars -= 2){
         rhombus_line(stars,SIZE);
     }

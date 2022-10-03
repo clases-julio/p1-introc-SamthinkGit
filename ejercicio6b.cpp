@@ -11,12 +11,14 @@ using namespace std;
 
   Notes:
   - Constant SIZE determines the number of rows-columns
+  - Only even numbers are accepted as sizes
   --------------------------------------------------------------------------------------
 */
 
 int main() {
 
     // ----- Declarations ------
+
     int SIZE = 8;
 
     // ----- Printing ------

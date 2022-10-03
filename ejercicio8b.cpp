@@ -1,6 +1,6 @@
 # include <iostream>
 using namespace std;
-/* ---------------------------- [Ex.Name] - [Exercises] --------------------------------
+/* ---------------------------- Exercise 8b - Practice 1 --------------------------------
   Author: Sebastian Mayorquin
   File: ejercicio8b.cpp
   Date: 30/09/2022
@@ -37,8 +37,10 @@ int main(){
     cin >> accuracy;
 
     // ----- Verifying ------
-    if (accuracy < 0)
-        cout << " [WARNING] Expected positive number." << endl;
+    if (accuracy < 0) {
+        cout << " [FAILURE] Expected positive number." << endl;
+        return 1;
+    }
 
     // ----- Calculating ------
     int counter = 1;

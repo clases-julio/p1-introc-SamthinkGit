@@ -6,7 +6,7 @@ using namespace std;
   Date: 30/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour:Prompts for a non-negative number, then prints its factorial
+  Behaviour: Requests for a non-negative number, then prints its factorial
  --------------------------------------------------------------------------------------
 */
 
@@ -18,13 +18,11 @@ int main(){
     int result;
 
     // ----- Asking Numbers ------
-
     cout << "---------- Exercise 8a - Practice 1 ----------\n";
     cout << " Write a non-negative number: ";
     cin >> num;
 
     // ----- Verifying Input ------
-
     if (num < 0){
         cout << " [ERROR] Factorial of negative numbers isn't defined\n";
         return 1;
@@ -34,7 +32,6 @@ int main(){
     if (num == 0) num = 1;
 
     // ----- Calculating ------
-
     result = num;
     while (result > 1) {
         result--;

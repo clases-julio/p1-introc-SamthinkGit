@@ -14,15 +14,14 @@ int main(){
 
     // ----- Declarations ------
 
-    float aprox = 0; // pi approximation
+    float aprox = 0;   // pi approximation
     float divisor = 1; // coefficient denominator
     float sign = 1;    // sign of coefficient
 
     // ----- Initializing ------
     cout << "---------- Exercise 9 - Practice 1 ----------" << endl;
 
-    // ----- Calculating Aproximations ------
-
+    // ----- Calculating Approximations ------
     for(int row = 0; row < 1000; row += 10){
 
         // Printing row identifier

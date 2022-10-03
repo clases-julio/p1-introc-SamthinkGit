@@ -3,7 +3,7 @@ using namespace std;
 
 /* ---------------------------- Exercise 2a - Practice 1 --------------------------------
   Author: Sebastian Mayorquin
-  File: ejercicio2.cpp
+  File: ejercicio2a.cpp
   Date: 28/09/2022
   Grade: Software Robotics (Software Design)
 

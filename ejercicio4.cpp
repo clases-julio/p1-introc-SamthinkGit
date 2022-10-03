@@ -1,13 +1,13 @@
 # include <iostream>
 using namespace std;
 
-/* ---------------------------- Exercise 3 - Practice 1 --------------------------------
+/* ---------------------------- Exercise 4 - Practice 1 --------------------------------
   Author: Sebastian Mayorquin
   File: ejercicio4.cpp
   Date: 28/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour: Prompts 3 numbers. Their sum, average, product will be printed as well as
+  Behaviour: Requests 3 numbers. Their sum, average and product will be printed as well as
   the smaller and bigger numbers.
 
   Notes:

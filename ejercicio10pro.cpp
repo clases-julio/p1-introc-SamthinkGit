@@ -6,7 +6,7 @@ using namespace std;
   Date: 30/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour: Requests an scale,then prints an NxN rhombus using the character '*'
+  Behaviour: Requests a scale,then prints an NxN rhombus using the character '*'
 
   Notes:
   - Constant size (scale) determines de NxN size
@@ -23,8 +23,6 @@ using namespace std;
  *
  *--------------------------------------------------------------------------------*/
 
-
-
 inline
 // --- [Function] rhombus_line() ---
 // Usage: Prints a line of the rhombus knowing
@@ -33,9 +31,9 @@ void rhombus_line(int amount, int SIZE){
 
     int spaces = (SIZE - amount)/2;
 
-    for (int i = 0; i < spaces; i++) cout << " ";
-    for (int i = 0; i < amount; i++) cout << "*";
-    for (int i = 0; i < spaces; i++) cout << " ";
+    for (int i = 0; i < spaces; i++) cout << ' ';
+    for (int i = 0; i < amount; i++) cout << '*';
+    for (int i = 0; i < spaces; i++) cout << ' ';
 
     cout << endl;
 
@@ -53,19 +51,18 @@ int main(){
     cin >> size;
 
     // ----- Verifying ------
-
     if (size > 19 || size < 1){
         cout << " [FAILURE] Scale inserted not valid";
         return 1;
     }
     if (size % 2 == 0) cout << " [WARNING] Even sizes could end in corrupted shapes" << endl;
 
-    // ----- Drawing First half------
+    // ----- Drawing First half ------
     for (int stars = 1; stars <= size; stars += 2){
         rhombus_line(stars,size);
     }
 
-    // ----- Drawing Second Half ------
+    // ----- Drawing Second half ------
     for (int stars = size-2; stars >= 1; stars -= 2){
         rhombus_line(stars,size);
     }
