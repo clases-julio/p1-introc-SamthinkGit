@@ -25,8 +25,9 @@ int main(){
 
     // ----- Verifying ------
 
+    // Warnings
     if (number.length() != AMOUNT)
-        cout << "[WARNING] " << AMOUNT << "-digit number was expected\n";
+        cout << "[WARNING] Wx001: " << AMOUNT << "-digit number was expected\n";
 
     // ----- Printing Result ------
 
@@ -37,3 +38,15 @@ int main(){
 
     return 0;
 }
+
+/* ----------------- Use Cases --------------------
+
+   ----- Expected Behaviour (return 0)
+ - Input: Integers
+
+   ----- Warnings (return 0)
+ - (Wx001) More inputs than requested
+   [Wrong Use] Some entries will be lost, the program
+   only accepts first AMOUNT inputs, others will be discarded
+
+ ---------------------------------------------------*/

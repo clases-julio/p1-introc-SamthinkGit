@@ -7,7 +7,7 @@ using namespace std;
   Date: 29/09/2022
   Grade: Software Robotics (Software Design)
 
-  Behaviour: Prints an 8x8 chess board
+  Behaviour: Prints an 8x8 chess board. (Not Optimized)
 
   --------------------------------------------------------------------------------------
 */

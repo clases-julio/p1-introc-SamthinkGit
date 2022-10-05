@@ -44,18 +44,35 @@ int main(){
     // ----- Declarations ------
 
     int size;
+    int MAX = 19; // Maximum size
+    int MIN = 1;  // Minimum size
+    string input_check;
 
     // ----- Initializing ------
     cout << "---------- Exercise 10pro - Practice 1 ----------" << endl;
     cout << " Enter the desired scale (1-19): ";
     cin >> size;
 
+    // Check if more than 1 input
+    if (input_check == "") getline(cin, input_check);
+
+
     // ----- Verifying ------
-    if (size > 19 || size < 1){
-        cout << " [FAILURE] Scale inserted not valid";
+
+    //Failures
+    if (!cin){
+        cerr << "\n [FAILURE] ERRx001: Input is not a number. Expected integer or float";
         return 1;
     }
-    if (size % 2 == 0) cout << " [WARNING] Even sizes could end in corrupted shapes" << endl;
+
+    if (size > MAX || size < MIN){
+        cout << " [FAILURE] ERRx002: Scale inserted not valid";
+        return 1;
+    }
+
+    // Warnings
+    if (size % 2 == 0) cout << " [WARNING] Wx001: Even sizes could end in corrupted shapes" << endl;
+    if (input_check != "") cout << " [WARNING] Wx002: Some entries will be lost" << endl;
 
     // ----- Drawing First half ------
     for (int stars = 1; stars <= size; stars += 2){
@@ -69,3 +86,28 @@ int main(){
 
     return 0;
 }
+
+/* ----------------- Use Cases --------------------
+
+   ----- Expected Behaviour (return 0)
+ - Input: Integers (Positive)
+
+    ----- Warnings (return 0)
+ - (Wx001) Even size
+   [Wrong Use]: Shapes with odd sizes can't be
+   correctly drawn
+
+ - (Wx002) More than 1 input
+   [Undefined Use]: Behaviour not defined for more
+   than 1 input
+
+
+   ----- Failures
+  - (ERRx001) Input is not an int
+   [Wrong Use] Can't operate with not integer inputs
+
+  - (ERRx002) Scale not valid
+   [Wrong Use] Only sizes between MAX and MIN are
+   accepted
+
+ ---------------------------------------------------*/

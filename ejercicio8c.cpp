@@ -42,19 +42,34 @@ int main(){
 
     int accuracy, x;
     double result = 1;
+    string input_check;
 
     // ----- Asking Parameters ------
     cout << "---------- Exercise 8c - Practice 1 ----------" << endl;
     cout << " Addend Accuracy: ";
     cin >> accuracy;
+
+    // Check if there are more than 1 input
+    getline(cin, input_check);
+
     cout << " X value: ";
     cin >> x;
 
+    // Check again if more than 1 input
+    if (input_check == "") getline(cin, input_check);
+
     // ----- Verifying ------
-    if (accuracy < 0)
-        cout << " [WARNING] Expected positive accuracy." << endl;
-    if (accuracy > 15)
-        cout << " [WARNING] There could be errors for accuracy values higher than 15" << endl;
+
+    // Failures
+    if (!cin){
+        cerr << "\n[FAILURE] ERRx001: Input is not a number. Expected integer";
+        return 1;
+    }
+
+    // Warnings
+    if (input_check != "") cout << " [WARNING] Wx001: Some entries will be lost" << endl;
+    if (accuracy < 0) cout << " [WARNING] Wx002: Expected positive accuracy." << endl;
+    if (accuracy > 15) cout << " [WARNING] Wx003: There could be errors for accuracy values higher than 15" << endl;
 
     // ----- Calculating ------
     int counter = 1;
@@ -77,3 +92,28 @@ int main(){
 
     return 0;
 }
+
+/* ----------------- Use Cases --------------------
+
+   ----- Expected Behaviour (return 0)
+ - Input: Integers (Positive)
+
+    ----- Warnings (return 0)
+ - (Wx001) Multiple Inputs
+   [Undefined Use]: Behaviour not defined for more than
+   1 input.
+
+ - (Wx002) Negative accuracy
+   [Undefined Use]: Behaviour not defined for negative
+   accuracies
+
+ - (Wx003) Too much accuracy
+   [Wrong Use]: Accuracy > 15 tends to end in overflow.
+   Results could not be valid.
+
+
+   ----- Failures
+ - (ERRx001) Input not valid
+   [Wrong Use] Can't operate with not integer inputs
+
+ ---------------------------------------------------*/

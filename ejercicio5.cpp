@@ -18,11 +18,32 @@ int main(){
 
     float pi = 3.14159;
     float radius, diameter, perimeter, area;
+    string input_check;
 
     // ----- Initializing ------
     cout << "---------- Exercise 5 - Practice 1 ----------\n";
     cout << " Radius: ";
     cin >> radius;
+
+    // Check if there are more than 1 input
+    getline(cin, input_check);
+
+    // ----- Verifying input -----
+
+    // Failures
+    if (!cin){
+        cerr << "\n [FAILURE] ERRx001: Input is not a number.";
+        return 1;
+    }
+
+    if (radius < 0){
+        cerr << "\n [FAILURE] ERRx002: Input can't be negative.";
+        return 2;
+    }
+
+    // Warnings
+    if (input_check != "") cout << "[WARNING] Wx001: Some entries will be lost\n";
+
 
     // ----- Calculating -----
     cout << "\n---------- Calculating... ----------\n";
@@ -50,3 +71,22 @@ int main(){
 
     return 0;
 }
+
+/* ----------------- Use Cases --------------------
+
+   ----- Expected Behaviour (return 0)
+ - Input: Float
+
+   ----- Warnings (return 0)
+ - (Wx001) Multiple inputs per request
+   [Wrong Use] Some entries will be lost, the program
+   only accepts one number per request
+
+   ----- Failures
+ - (ERRx001) Input is not a number
+   [Wrong Use] Can't operate with strings
+
+ - (ERRx002) Input is negative
+   [Undefined Use] Calculations not defined for negative
+   numbers
+ ---------------------------------------------------*/
